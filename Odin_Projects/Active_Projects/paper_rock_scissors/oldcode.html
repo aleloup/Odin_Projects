@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rock, Paper, Scissors Game VS Computer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <script type="text/javascript">
+            // toLocaleLowerCase converts a string to lowercase letters. In this case the user inputs rock, paper, or 
+            // scissors and it will be converted to lowercase and stored into the playerSelection variable. The return 
+            //statement stops the execution of the the playerPlay function and returns it's value.'
+
+            function playerPlay(){
+                let playerSelection = prompt("Rock, paper, or scissors? Please type in your selection.").toLocaleLowerCase();
+                console.log("You chose " + playerSelection);
+                return playerSelection;
+            }
+
+            // We use an array [ ] for the computerChoices variable as we are storing multiple values for a single variable.
+            // math.random() always returns a random number lower than 1 . Math.random() used with Math.floor() can be used to 
+            // return random integers. [Math.floor(Math.random() * 3)] will return a random integer from 0-2
+            // 
+            function computerPlay(){
+                let computerChoices = ["rock", "paper", "scissors"] //values are assigned to array 0-2
+                let computerSelection = computerChoices[Math.floor(Math.random() * 3)]; // generates number 0-2
+                alert("The computer chose " + computerSelection);
+                return computerSelection; //returns our randomly generated number
+
+            }
+
+            // Remember when using comparison operators : === (strict equal) returns true if the operands 
+            // are equal and of the same type. The logical operat && says that if expression 1 can ver converted
+            // to true, than it returns expression 2. Else, it returns expression 1.
+
+            
+            function playRound(playerSelection, computerSelection){
+                playerSelection = playerPlay(); //This is the variable that stores the user's selection'
+                computerSelection = computerPlay(); // stores random generated number
+
+                // These variables need to be defined. they are left blank because the variable will be defined
+                //within the else if expression. 
+                let winner;
+                let result;
+
+                if (playerSelection == computerSelection) {
+                     // if the number our user picks is the same as the randomly generated number:                    
+                    winner = "draw";
+                    result = "It's a draw!"
+            }   else if (playerSelection === "rock" && computerSelection === "paper") {
+                // if the player picks rock, and the randomly generated number corresponds to paper[1]. this is 
+                // the result. If player picks scissors or paper then function sees that the player did not
+                // pick "rock" and moves on to the other expressions. 
+                winner = "computerWins"
+                result = "You lose, paper covers rock!";
+            }   else if (playerSelection === "rock" && computerSelection === "scissors"){
+                winner = "playerWins";
+                result = "You win, rock crushes scissors!";
+            }   else if (playerSelection === "paper" && computerSelection === "rock"){
+                winner = "playerWins"
+                result = "You win, paper covers rock!";
+            }   else if (playerSelection === "paper" && computerSelection === "scissors"){
+                winner = "computerWins"
+                result = "You lose, scissors cuts paper!";
+            }   else if (playerSelection === "scissors" && computerSelection === "rock"){
+                winner = "computerWins";
+                result = "You lose, rock crushes scissors!"
+            }   else if (playerSelection === "scissors" && computerSelection === "paper"){
+                winner = "playerWins";
+                result = "You win! Scissors cuts paper!";
+            }
+                
+                return result
+            }
+
+            // This is the function that keeps count of our score.  
+
+            function game (){
+                let winner; // based off above functions this will store either computerWins or playerWins
+                let score = 0; // what this function starts off with for a score (best of 5)
+                let finalScore; // left blank because we don't know what it will be, but needs to be defined.'
+                console.log(playRound());
+
+                if (winner === "playerWins") {
+                    ++score //variable score started at 0, we use ++ because it adds 1 and updates the score 
+                            // variable to 1.
+                }
+                console.log(playRound());
+                if (winner === 'playerWins') {
+                    ++score //variable score updated to 1, we use ++ because it adds 1 and updates the score 
+                            //variable to 2.
+                }
+                console.log(playRound());
+                if (winner === 'playerWins') {
+                    ++score
+                }
+                console.log(playRound());
+                if (winner === 'playerWins') {
+                    ++score
+                }
+                console.log(playRound()); 
+                if (winner === 'playerWins') {
+                    ++score
+                } 
+                //if after 5 tries user has 3 or more for a score, then the user wins. otherwise obviously computer
+                // has gotten more than the user and is the winner.
+                if (score >= 3) {
+                    finalScore = 'Congrats - you won!!';
+                }   else {
+                    finalScore = 'The computer wins, this time...';
+                }
+                return finalScore;
+                
+            }
+                alert(game()); // will display in the console log what the game function returns.
+                //loops have not been covered up to this point 
+        </script>
+        
+  
+    </body>
+</html>

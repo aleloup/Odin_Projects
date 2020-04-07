@@ -1,0 +1,43 @@
+
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    table {
+        display: inline-block;
+    }
+    
+    .choiceImages img{
+        height: 250px;
+        width: 230px;
+    }
+    
+    .runningScore {
+        font-size: 45px;
+    }
+    
+    #roundResults {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        height: 260px;
+        width: 80%;
+    }
+    
+    #roundResults div {
+        width: 20%;
+        border: 1px black solid;
+    }
+    
+    @keyframes gameOver {
+        from {color: white}
+        to {color: black}
+    }
+    
+    #gameOver {
+        animation-duration: 2s;
+        animation-name: gameOver;
+    }
+    

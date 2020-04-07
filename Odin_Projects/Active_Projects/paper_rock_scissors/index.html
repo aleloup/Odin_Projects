@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rock, Paper, Scissors Game VS Computer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="paper_rock_scissors.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+ 
+  <center>
+    <h1>Let's Play!</h1>
+    <div id="buttonContainer">
+        <button id="paper" >Paper</button>
+        <button id="scissors" >Scissors</button>
+        <button id="rock" >Rock</button>
+    </div>
+    <div id="finalResults">
+        <p id="gameOver"></p>
+    </div>
+        <table class="choiceImages">
+            <tr align="center"><td><h3>You Choose</h3><td><h3>Computer Chooses</h3></tr>
+            <tr align="center"><td><img id="playerChoice"><td><img id="computerChoice"></tr>
+            <tr align="center"><td><p class="runningScore" id="runningPlayerScore">0</p><td><p class="runningScore" id="runningComputerScore">0</p></tr>
+        </table>
+    <br>
+    
+    <div id="roundResults">
+    </div>
+    
+    </center>
+ <script src="script.js"></script>
+    </body>
+    </html>
+</html>
