@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Loop Exercises - Fundamentals 4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    
+        
+
+        <script>
+
+//Active Learning: loop down from 10-1
+
+                            const output = document.querySelector('.output');
+                                             output.innerHTML = '';
+                                let i = 10;
+
+                                while(i >= 0) {
+                                let para = document.createElement('p'); //creates a new paragraph
+                                if(i === 10) {
+
+                                para.textContent = 'Countdown ' + i; // makes the text inside the paragraph 
+                                //equal to whatever you put on the right-hand side, after the equals sign.
+
+                                } else if(i === 0) {
+                                para.textContent = 'Blast off!';
+                                } else {
+                                para.textContent = i;
+                                }
+
+                                output.appendChild(para); //— appends the paragraph to the output <div>.
+
+                                i--;
+                                }
+// Active Learning : Filling in a guest list
+
+            const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+            const admitted = document.querySelector('.admitted');
+            const refused = document.querySelector('.refused');
+            admitted.textContent = 'Admit: ';
+            refused.textContent = 'Refuse: '
+            let i = 0; //The initializer
+
+            do {
+            if(people[i] === 'Phil' || people[i] === 'Lola') { //if either phil or lola are true it will execute the next
+            refused.textContent += people[i] + ', ';            // line of code:  Refuse: phil/lola
+            } else {                                //If it isnt phil or lola then everyone else is admitted.
+            admitted.textContent += people[i] + ', ';
+            }
+            i++; // our iterator. After people[0], is passed. it will add one to i, so the next iteration will be 
+            // people[1] to see if this is either phil or lola etc. 
+            } while(i < people.length); //The loop has been told to run until i is no longer smaller than the length
+            // of the people array. This is important — the exit condition shows the condition under which the loop 
+            //will still run. So in this case, while i < people.length is still true, the loop will still run.
+
+            refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.'; //slice used to remove
+            // extra space and comma used in string.  
+            admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
