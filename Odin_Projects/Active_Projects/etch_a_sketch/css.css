@@ -1,0 +1,27 @@
+/* common best practice is to define custom properties on the :root pseudo-class, so it can be applied globally
+across the HTML document. Declaring a custom property is done using a custom property name that begins with a
+double hyphen (--), and a property value that can be any valid CSS value. They are set using custom property notation 
+(e.g., --main-color: black;) and are accessed using the var() function (e.g., color: var(--main-color);).
+In below example, we are going to be starting with 1. which would be one column and one row. 1x1*/
+:root {             
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
+
+  /* this css defines the parameters of the #container div. */
+  #container {
+    display: grid; /* generates a block-level grid */
+    grid-gap: 1em; /*The gap CSS property sets the gaps (gutters) 
+    between rows and columns. It is a shorthand for row-gap and column-gap. */
+    grid-template-rows: repeat(var(--grid-rows), 1fr); /*Fr is a fractional unit. by using 1fr we are saying that all of the rows 
+    will all be equal */
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  } /*The repeat() CSS function represents a repeated fragment of the track list, allowing a large number of 
+  columns or rows that exhibit a recurring pattern to be written in a more compact form.*/
+
+  /* the is the class the newly formed divs have. this class defines the parameters of the new divs. */
+  .grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
