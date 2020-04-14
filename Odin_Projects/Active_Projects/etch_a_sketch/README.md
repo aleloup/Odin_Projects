@@ -3,7 +3,7 @@ Project: Etch-a-Sketch
 
 
 ------------------------------------------------------------------------------------------------------------------
- Completed Wednesday April 8th
+******************* Completed Wednesday April 8th
 
     Follow the instructions atop Odin’s Google Homepage project to setup a git repository for this project.
     Create a webpage with a 16x16 grid of square divs
@@ -23,6 +23,9 @@ Project: Etch-a-Sketch
 
 
             --------------------------------------------------------------------------------------------------------
+
+******************* next up 
+
 
     Set up a “hover” effect so that the grid divs change color when your mouse passes over them, leaving a (pixelated) trail through your grid like a pen would.
         Hint: “hovering” is what happens when your mouse enters a div and ends when your mouse leaves it.. you can set up event listeners for either of those events as a starting point.

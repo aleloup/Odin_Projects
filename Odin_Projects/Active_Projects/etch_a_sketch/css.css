@@ -9,19 +9,35 @@ In below example, we are going to be starting with 1. which would be one column 
   }
 
   /* this css defines the parameters of the #container div. */
-  #container {
+  #gridContainer {
     display: grid; /* generates a block-level grid */
-    grid-gap: 1em; /*The gap CSS property sets the gaps (gutters) 
+    grid-gap: 1px; /*The gap CSS property sets the gaps (gutters) 
     between rows and columns. It is a shorthand for row-gap and column-gap. */
-    grid-template-rows: repeat(var(--grid-rows), 1fr); /*Fr is a fractional unit. by using 1fr we are saying that all of the rows 
+    grid-template-rows: repeat(var(--grid-rows),1fr); /*Fr is a fractional unit. by using 1fr we are saying that all of the rows 
     will all be equal */
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-  } /*The repeat() CSS function represents a repeated fragment of the track list, allowing a large number of 
+   /*The repeat() CSS function represents a repeated fragment of the track list, allowing a large number of 
   columns or rows that exhibit a recurring pattern to be written in a more compact form.*/
-
+  width: 50%;
+  margin: 0 auto; /*centers the grid in screen.*/
+}
   /* the is the class the newly formed divs have. this class defines the parameters of the new divs. */
   .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
+    padding: 2px;
+    border: 1px solid white;
     text-align: center;
   }
+
+  .my-color-class {
+        background: green !important;
+        color: white;
+  }
+
+  .buttons{
+    text-align: center;
+    margin-bottom:25px;
+  }
+  h1 {
+      text-align: center;
+  }
+
