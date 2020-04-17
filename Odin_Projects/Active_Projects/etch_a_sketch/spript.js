@@ -6,7 +6,7 @@
 // how code was arrived at. 
 
 // Creat a webpage with 16x16 grid of square divs using javascript.
-
+let initial='black';
 const gridContainer = document.getElementById("gridContainer"); // this takes the divs that were created by the below loop and stored 
 // into cell variable, that were added to the container variable... and makes this information available to the ID attribute 
 // in html
@@ -21,18 +21,13 @@ gridContainer.style.setProperty('--grid-cols', cols); //'--grid-cols' creates a 
    let cell = document.createElement("div"); //every time loop runs new div element created
     cell.innerText = (i + 1); // each variable 'cell' that contains the newly created div displays the number div it is.
     cell.onmouseover = function() {
-      cell.style.backgroundColor = 'black';
+      cell.style.backgroundColor = 'initial';
       cell.style.color = 'white';
     };
     gridContainer.appendChild(cell).className = "grid-item"; // every time a new cell is added in the loop it receives class name of "grid-item"
 }
 }
- function turnGreen (){
-      cell.onmouseover = function() {
-      cell.style.backgroundColor = 'green';
-      cell.style.color = 'white';
-    };
- };
+ 
 
 
  function clearGrid (){
@@ -52,7 +47,7 @@ newGridBtn.addEventListener("click", function() {
 }
 );
 
-greenButton.addEventListener("click", function() {
+greenButton.addEventListener("", function() {
   turnGreen();
 }
 );
