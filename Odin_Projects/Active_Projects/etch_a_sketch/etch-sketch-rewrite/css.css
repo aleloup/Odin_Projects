@@ -3,9 +3,24 @@
    border-style: solid;
    border-color: white;
 }
+.bodycontainer {
+   margin: 0 auto;
+
+   text-align: center;
+   
+   width: 67%;
+   
+   background: white;
+   
+   border: 10px solid orange;
+   
+   border-radius: 20px;
+
+}
+
 #container{
 
-    margin: 5px 0px 5px 0px;
+    margin: 0 auto;
     height: 680px;
     width:680px;
     border: solid;
@@ -13,16 +28,21 @@
     border-color: green;
     background-color: white;
     display: grid;
+    margin-top:20px;
 }
 body{
    background: rgb(11, 44, 75);
 }
 h1{
-   margin: 18px;
-   font-size: 70px;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #c0e3d6ba;
-   color:#5374AC;
+   margin: 0px;
+
+font-size: 114px;
+
+font-family: 'Lobster', cursive;
+
+color: #5374AC;
+
+text-shadow: 5px 3px #151c20;
 }
 .button{
    
